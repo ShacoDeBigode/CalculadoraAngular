@@ -1,0 +1,43 @@
+<div class="calculator">
+    <div class="calculator-header">
+      <h2>Calculadora</h2>
+    </div>
+  
+    <div class="form-group">
+      <label for="valor1">Valor 1</label>
+      <input type="number" id="valor1" [(ngModel)]="valor1" class="input-field">
+    </div>
+  
+    <div class="form-group">
+      <label for="operacao">Operação</label>
+      <div class="operations">
+        <input type="radio" id="soma" name="operacao" [(ngModel)]="operacao" value="soma" checked>
+        <label for="soma">+ (Soma)</label>
+  
+        <input type="radio" id="subtracao" name="operacao" [(ngModel)]="operacao" value="subtracao">
+        <label for="subtracao">- (Subtração)</label>
+  
+        <input type="radio" id="multiplicacao" name="operacao" [(ngModel)]="operacao" value="multiplicacao">
+        <label for="multiplicacao">* (Multiplicação)</label>
+  
+        <input type="radio" id="divisao" name="operacao" [(ngModel)]="operacao" value="divisao">
+        <label for="divisao">/ (Divisão)</label>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="valor2">Valor 2</label>
+      <input type="number" id="valor2" [(ngModel)]="valor2" class="input-field">
+    </div>
+  
+    <div class="result">
+      <h3>Resultado</h3>
+      <div class="result-box">{{ resultado }}</div>
+    </div>
+  
+    <div class="buttons">
+      <button (click)="calcular()" class="calculate-btn">Calcular</button>
+      <button (click)="limpar()" class="clear-btn">Limpar</button>
+    </div>
+  </div>
+  
